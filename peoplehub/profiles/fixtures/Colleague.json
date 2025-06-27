@@ -1,0 +1,21 @@
+[
+{
+  "model": "profiles.colleague",
+  "pk": 4,
+  "fields": {
+    "first_name": "Tyler",
+    "last_name": "Chenoweth",
+    "current_company": "Altamira",
+    "shared_company": "Sofwerx",
+    "phone": "1233214444",
+    "email": "nonya@business.com",
+    "photo": "contact_photos/Pokémon_Gengar_art_MwmCgKc.png",
+    "last_contact": "2025-06-27",
+    "start_date_worked": "2024-12-01",
+    "end_date_worked": "2025-06-01",
+    "hobbies": [
+      1
+    ]
+  }
+}
+]
