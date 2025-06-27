@@ -37,10 +37,13 @@ class Colleague(models.Model):
 
 
     def clean(self):
-        if self.end_date < self.start_date:
+        if self.end_date_worked < self.start_date_worked:
             raise ValidationError("End date cannot be before start date.")
         
-        if self.last_contact > date.today:
+        if self.end_date_worked > date.today():
+            raise ValidationError("End date cannot be after today")
+
+        if self.last_contact > date.today():
             raise ValidationError("Last contacted field must cannot be after today")
 
 
