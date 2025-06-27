@@ -1,0 +1,23 @@
+[
+{
+  "model": "profiles.hobby",
+  "pk": 1,
+  "fields": {
+    "name": "trains"
+  }
+},
+{
+  "model": "profiles.hobby",
+  "pk": 2,
+  "fields": {
+    "name": "birdwatching"
+  }
+},
+{
+  "model": "profiles.hobby",
+  "pk": 3,
+  "fields": {
+    "name": "gardening"
+  }
+}
+]
