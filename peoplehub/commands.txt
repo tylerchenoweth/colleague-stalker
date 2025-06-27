@@ -1,0 +1,7 @@
+
+Load data into database
+python3 manage.py loaddata profiles/fixtures/filename.json
+
+Get data from the db and put it into json fixtures
+python3 manage.py dumpdata profiles.Hobby --indent 2 > profiles/fixtures/filename.json
+
