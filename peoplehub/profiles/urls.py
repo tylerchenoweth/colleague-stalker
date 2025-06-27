@@ -9,7 +9,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 router = DefaultRouter()
-router.register('hobbys', HobbyViewSet)
+router.register('hobbies', HobbyViewSet)
 
 urlpatterns = [
     path("", views.home, name="home"),

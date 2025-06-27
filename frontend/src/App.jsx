@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+
 import './App.css'
+
+import axios from 'axios';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,7 +12,7 @@ function App() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:5000')  // Express API endpoint
+    fetch('http://localhost:8000/profiles/')  // Express API endpoint
       .then(res => res.text())
       .then(data => setMessage(data));
   }, []);

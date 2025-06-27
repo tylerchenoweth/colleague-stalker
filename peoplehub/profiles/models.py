@@ -9,6 +9,7 @@ phone_validator = RegexValidator(
     message="This field must be exactly 10 digits."
 )
 
+
 class Colleague(models.Model):
     first_name = models.CharField(max_length=50, blank=False, null=False)
     last_name = models.CharField(max_length=50, blank=False, null=False)
@@ -27,6 +28,7 @@ class Colleague(models.Model):
 
     class Meta:
         unique_together = ('first_name', 'last_name')
+
 
 class Hobby(models.Model):
 
