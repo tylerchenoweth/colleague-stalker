@@ -25,14 +25,21 @@ class Colleague(models.Model):
     hobbies = models.ManyToManyField('Hobby', related_name='colleague', blank=True)
     photo = models.ImageField(upload_to='contact_photos/', blank=True, null=True)
 
+    last_contact = models.DateField(blank=False, null=False),
+    start_date_worked = models.DateField(blank=True, null=False),
+    end_date_worked = models.DateField(blank=True, null=False),
 
     class Meta:
         unique_together = ('first_name', 'last_name')
 
+    def __str__(self):
+        return self.first_name
+
 
 class Hobby(models.Model):
 
-    name = models.CharField(max_length=200, unique=True)
+    name = models.CharField(max_length=200, unique=True, blank=False, null=False)
+
 
     def __str__(self):
         return self.name

@@ -12,7 +12,7 @@ function App() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:8000/profiles/')  // Express API endpoint
+    fetch('http://localhost:8000/profiles/api/hobbies/')  // Express API endpoint
       .then(res => res.text())
       .then(data => setMessage(data));
   }, []);
