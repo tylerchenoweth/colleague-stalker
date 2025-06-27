@@ -1,0 +1,50 @@
+# ---- Python / Django (peoplehub backend) ----
+peoplehub/__pycache__/
+peoplehub/**/*.py[cod]
+peoplehub/**/migrations/
+!peoplehub/**/migrations/__init__.py
+peoplehub/.env
+peoplehub/*.sqlite3
+peoplehub/media/
+peoplehub/static/
+peoplehub/venv/
+peoplehub/.venv/
+peoplehub/*.log
+peoplehub/.coverage
+peoplehub/.pytest_cache/
+peoplehub/*.egg-info/
+
+# ---- Node / React (frontend) ----
+frontend/node_modules/
+frontend/.env
+frontend/.next/
+frontend/build/
+frontend/dist/
+frontend/.turbo/
+frontend/.cache/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/package-lock.json
+frontend/pnpm-lock.yaml
+
+# ---- OS / Editor / IDE ----
+*.DS_Store
+*.swp
+Thumbs.db
+.vscode/
+.idea/
+
+# ---- General Python build artifacts ----
+.cache/
+*.egg
+build/
+dist/
+
+# ---- Test coverage ----
+htmlcov/
+coverage.xml
+
+# ---- Docker (optional) ----
+*.pid
+docker-compose.override.yml
