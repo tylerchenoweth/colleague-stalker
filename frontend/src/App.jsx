@@ -7,20 +7,35 @@ import './App.css'
 import axios from 'axios';
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  const [message, setMessage] = useState('');
+  const [colleagues, setColleagues] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8000/profiles/api/hobbies/')  // Express API endpoint
-      .then(res => res.text())
-      .then(data => setMessage(data));
+    fetch('http://localhost:8000/profiles/api/coleagues/')  // Express API endpoint
+      .then(res => res.json())
+      .then(data => setColleagues(data)); 
   }, []);
 
   return (
-    <>
-      <h1>{message}</h1>
-    </>
+    
+    <div>
+      {colleagues.map(colleague => (
+        <div className="colleagueRow" key={colleague.id}>
+          <p>
+            {colleague.first_name}
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            {colleague.last_name}
+          </p>
+          
+          
+        </div>
+      ))}
+    </div>
+
+
+    
   )
 }
 
