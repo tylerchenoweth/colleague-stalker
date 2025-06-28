@@ -14,9 +14,10 @@ class ColleagueSerializer(serializers.ModelSerializer):
             'email',
             'hobbies',
             'photo',
-            '',
-            '',
-            ]
+            'last_contact',
+            'start_date_worked',
+            'end_date_worked'
+        ]
 
 
 class HobbySerializer(serializers.ModelSerializer):

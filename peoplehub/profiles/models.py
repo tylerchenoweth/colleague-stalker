@@ -28,23 +28,30 @@ class Colleague(models.Model):
     hobbies = models.ManyToManyField('Hobby', related_name='colleague', blank=True)
     photo = models.ImageField(upload_to='contact_photos/', blank=True, null=True)
 
-    last_contact = models.DateField(blank=False, null=False)
-    start_date_worked = models.DateField(blank=True, null=False)
-    end_date_worked = models.DateField(blank=True, null=False)
+    last_contact = models.DateField(blank=True, null=True)
+    start_date_worked = models.DateField(blank=True, null=True)
+    end_date_worked = models.DateField(blank=True, null=True)
 
     class Meta:
         unique_together = ('first_name', 'last_name', 'shared_company')
 
 
     def clean(self):
-        if self.end_date_worked < self.start_date_worked:
-            raise ValidationError("End date cannot be before start date.")
-        
-        if self.end_date_worked > date.today():
-            raise ValidationError("End date cannot be after today")
 
-        if self.last_contact > date.today():
-            raise ValidationError("Last contacted field must cannot be after today")
+        if self.end_date_worked and not self.start_date_worked:
+            raise ValidationError("Must have start date if you have an end date")
+        
+        if self.end_date_worked and self.start_date_worked:
+            if self.end_date_worked < self.start_date_worked:
+                raise ValidationError("End date cannot be before start date.")
+        
+        if self.end_date_worked:
+            if self.end_date_worked > date.today():
+                raise ValidationError("End date cannot be after today")
+
+        if self.last_contact:
+            if self.last_contact > date.today():
+                raise ValidationError("Last contacted field must cannot be after today")
 
 
 
