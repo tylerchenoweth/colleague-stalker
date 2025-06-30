@@ -12,6 +12,9 @@ import {useEffect, useState} from 'react';
 
 import {Outlet, Link} from 'react-router-dom';
 
+import EditButton from '../../components/EditButton/EditButton';
+import DeleteButton from '../../components/DeleteButton/DeleteButton';
+
 import './ColleagueList.css';
 
 function ColleagueList() {
@@ -27,23 +30,26 @@ function ColleagueList() {
     return (
         
         <div>
-        {colleagues.map(colleague => (
-            <div className="colleagueRow" key={colleague.id}>
-                <Link to="/details" state={{id: colleague.id}}>Details</Link>
-                <p>{colleague.id}</p>
-                <p>
-                    {colleague.first_name}
-                </p>
-                <p>&nbsp;</p>
-                <p>
-                    {colleague.last_name}
-                </p>
-                <p>---</p>
-                <p>
-                    {colleague.current_company}
-                </p>
-            </div>
-        ))}
+            <h1>Da List</h1>
+            {colleagues.map(colleague => (
+                <div className="colleagueRow" key={colleague.id}>
+                    <Link to="/details" state={{id: colleague.id}}>Details</Link>
+                    <p>{colleague.id}</p>
+                    <p>
+                        {colleague.first_name}
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>
+                        {colleague.last_name}
+                    </p>
+                    <p>---</p>
+                    <p>
+                        {colleague.current_company}
+                    </p>
+                    <EditButton />
+                    <DeleteButton id={colleague.id} />
+                </div>
+            ))}
         </div>
     )
 
