@@ -37,5 +37,45 @@
       1
     ]
   }
+},
+
+{
+  "model": "profiles.colleague",
+  "pk": 3,
+  "fields": {
+    "first_name": "Fuck a duck",
+    "last_name": "Laster",
+    "current_company": "Los Pollos Hermanos",
+    "shared_company": "Dexters Laboratory",
+    "phone": "8375639375",
+    "email": "bequiet@ssshh.com",
+    "photo": "contact_photos/Pokémon_Gengar_art_MwmCgKc.png",
+    "last_contact": "2025-06-27",
+    "start_date_worked": "2024-12-01",
+    "end_date_worked": "2025-06-01",
+    "hobbies": [
+      1
+    ]
+  }
+},
+
+{
+  "model": "profiles.colleague",
+  "pk": 4,
+  "fields": {
+    "first_name": "Four",
+    "last_name": "Laster",
+    "current_company": "Los Pollos Hermanos",
+    "shared_company": "Dexters Laboratory",
+    "phone": "8375639375",
+    "email": "bequiet@ssshh.com",
+    "photo": "contact_photos/Pokémon_Gengar_art_MwmCgKc.png",
+    "last_contact": "2025-06-27",
+    "start_date_worked": "2024-12-01",
+    "end_date_worked": "2025-06-01",
+    "hobbies": [
+      1
+    ]
+  }
 }
 ]
