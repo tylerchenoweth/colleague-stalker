@@ -1,21 +1,29 @@
 
 import './DeleteButton.css'
 
-function DeleteButton(id) {
+function DeleteButton({id, onDelete}) {
 
-    function handleClick() {
-        console.log("Deleting: ", id['id']);
+    const handleDelete = async () => {
+        if(confirm("Are you sure you want to delete permanently?") === true) {
+            const response = await fetch(`http://localhost:8000/profiles/api/coleagues/${id}/`, {
+                method: "DELETE"
+            });
 
-        // fetch('http://localhost:8000/profiles/api/coleagues/')  // Express API endpoint
-        // .then(res => res.json())
-        // .then(data => setColleagues(data));
+            if(response.ok) {
+                onDelete();
+            } else {
+                console.error("Failed to delete item...");
+            }
+        } else {
+            console.log("Cancelled deletion...")
+        }
     }
 
     return (
         <button 
         className="deleteButton"
         type="button"
-        onClick={() => handleClick()}>
+        onClick={handleDelete}>
             Delete
         </button>
 
