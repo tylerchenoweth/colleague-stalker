@@ -21,10 +21,14 @@ function ColleagueList() {
 
     const [colleagues, setColleagues] = useState([]);
 
-    useEffect(() => {
+    const fetchColleagues = () => {
         fetch('http://localhost:8000/profiles/api/coleagues/')  // Express API endpoint
         .then(res => res.json())
-        .then(data => setColleagues(data)); 
+        .then(data => setColleagues(data));
+    }
+
+    useEffect(() => {
+         fetchColleagues();
     }, []);
 
     return (
@@ -47,7 +51,7 @@ function ColleagueList() {
                         {colleague.current_company}
                     </p>
                     <EditButton />
-                    <DeleteButton id={colleague.id} />
+                    <DeleteButton id={colleague.id} onDelete={fetchColleagues} />
                 </div>
             ))}
         </div>
