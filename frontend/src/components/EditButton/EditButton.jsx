@@ -22,7 +22,7 @@ function EditButton({colleague}) {
                 type="button"
                 onClick={handleClick}
             >
-                    Edit
+                Edit
                 
             </button>
         </Link>

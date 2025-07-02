@@ -18,9 +18,54 @@ function EditColleague() {
 
             <form>
                 <label>
-                    Name:
-                    <input 
+                    
+                    First Name: <input 
                         value={colleague.first_name} 
+                        onChange={(e) => setName(e.target.value)} 
+                    />
+                    <br></br>
+                    Last Name: <input 
+                        value={colleague.last_name} 
+                        onChange={(e) => setName(e.target.value)} 
+                    />
+                    <br></br>
+                    Current Company: <input 
+                        value={colleague.current_company} 
+                        onChange={(e) => setName(e.target.value)} 
+                    />
+                    <br></br>
+                    Shared Company: <input 
+                        value={colleague.shared_company} 
+                        onChange={(e) => setName(e.target.value)} 
+                    />
+                    <br></br>
+                    Phone: <input 
+                        value={colleague.phone} 
+                        onChange={(e) => setName(e.target.value)} 
+                    />
+                    <br></br>
+                    Email: <input 
+                        value={colleague.email} 
+                        onChange={(e) => setName(e.target.value)} 
+                    />
+                    <br></br>
+                    Hobbies: <input 
+                        value={colleague.hobbies} 
+                        onChange={(e) => setName(e.target.value)} 
+                    />
+                    <br></br>
+                    Last Contact: <input 
+                        value={colleague.last_contact} 
+                        onChange={(e) => setName(e.target.value)} 
+                    />
+                    <br></br>
+                    Start Date: <input 
+                        value={colleague.start_date_worked} 
+                        onChange={(e) => setName(e.target.value)} 
+                    />
+                    <br></br>
+                    End Date: <input 
+                        value={colleague.end_date_worked} 
                         onChange={(e) => setName(e.target.value)} 
                     />
                 </label>
