@@ -39,8 +39,6 @@ function ProfileDetails() {
                 colleagues.hobbies.includes(h.id)
             )   
             
-            console.log(">>>", colleagues.hobbies)
-            
             setHobbies(selectHobbies)
         }); 
     }, [colleagues]);

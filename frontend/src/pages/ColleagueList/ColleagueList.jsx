@@ -39,6 +39,7 @@ function ColleagueList() {
                 <div className="colleagueRow" key={colleague.id}>
                     <Link to="/details" state={{id: colleague.id}}>Details</Link>
                     <p>{colleague.id}</p>
+                    <p>&nbsp;</p>
                     <p>
                         {colleague.first_name}
                     </p>
@@ -46,11 +47,12 @@ function ColleagueList() {
                     <p>
                         {colleague.last_name}
                     </p>
+                    <p>&nbsp;</p>
                     <p>---</p>
-                    <p>
-                        {colleague.current_company}
-                    </p>
-                    <EditButton />
+                    <p>&nbsp;</p>
+                   
+                    <EditButton colleague={colleague}/>
+                    <p>&nbsp;</p>
                     <DeleteButton id={colleague.id} onDelete={fetchColleagues} />
                 </div>
             ))}

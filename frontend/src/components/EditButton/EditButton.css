@@ -3,5 +3,10 @@
 
 .editButton {
     background-color: #FFF94F;
-    color: #242424;
+    color: #242424;   
+}
+
+.buttonLink {
+    text-decoration: none;
+    color: inherit;
 }

@@ -1,7 +1,8 @@
+import {Outlet, Link} from 'react-router-dom';
 
 import './EditButton.css'
 
-function EditButton() {
+function EditButton({colleague}) {
 
 
     function handleClick() {
@@ -10,13 +11,21 @@ function EditButton() {
 
     return (
      
+            
+        <Link 
+            to="/edit" 
+            state={{ colleague }}
+            className="buttonLink"
+        >
             <button 
-            className="editButton"
-            type="button"
-            onClick={handleClick}
+                className="editButton"
+                type="button"
+                onClick={handleClick}
             >
-                Edit
+                    Edit
+                
             </button>
+        </Link>
         
     )
 }
