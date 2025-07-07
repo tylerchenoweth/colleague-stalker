@@ -3,7 +3,25 @@ import {useState} from 'react';
 import {Outlet, Link} from 'react-router-dom';
 import { useLocation } from "react-router-dom";
 
+import FormField from '../../components/FormField/FormField';
+
 import './EditColleague.css'
+
+// const response = await fetch(`http://localhost:8000/profiles/api/coleagues/${id}/`, {
+//     method: "PUT",
+//     headers: {
+//         "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({
+//         // your updated fields go here
+//         first_name: "UpdatedName",
+//         last_name: "UpdatedLastName",
+//         job_title: "UpdatedJob"
+//     }),
+// });
+
+
+
 
 function EditColleague() {
 
@@ -17,6 +35,11 @@ function EditColleague() {
             <h2>{colleague.id}</h2>
 
             <form>
+                <FormField 
+                    fieldValue={colleague.first_name} 
+                    fieldName="first_name"
+                    onChangeHandler={setName(e.target.value)}
+                />
                 <label>
                     
                     First Name: <input 
