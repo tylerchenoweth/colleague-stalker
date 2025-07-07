@@ -1,0 +1,37 @@
+[
+{
+  "model": "profiles.hobby",
+  "pk": 1,
+  "fields": {
+    "name": "trains"
+  }
+},
+{
+  "model": "profiles.hobby",
+  "pk": 2,
+  "fields": {
+    "name": "beer"
+  }
+},
+{
+  "model": "profiles.hobby",
+  "pk": 3,
+  "fields": {
+    "name": "real estate"
+  }
+},
+{
+  "model": "profiles.hobby",
+  "pk": 4,
+  "fields": {
+    "name": "carpentry"
+  }
+},
+{
+  "model": "profiles.hobby",
+  "pk": 5,
+  "fields": {
+    "name": "movies"
+  }
+}
+]
